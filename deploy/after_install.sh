@@ -1,3 +1,3 @@
 #!/bin/sh
 cd /home/ec2-user/
-/usr/local/bin/npm start
+/opt/node-v8.10.0-linux-x64/lib/node_modules/npm/bin/npm-cli.js start
