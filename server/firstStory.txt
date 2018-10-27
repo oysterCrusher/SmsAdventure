@@ -1,3 +1,8 @@
-Welcome to your first story. You are alive on a ship.
-Go forward or back?
-Hello! You still there?
+You can only go Up!
+You can only go Right!
+You can only go Right!
+You can only go Up!
+You can only go Up!
+You can only go Left!
+You can only go Up!
+Finish.
