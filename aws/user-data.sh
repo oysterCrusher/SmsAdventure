@@ -1,15 +1,10 @@
 #!/bin/bash
 
 # Provision instance with necessary stuff on boot
-#!/bin/bash
 yum update -y
-yum install -y wget vim ruby unzip
-cd /opt
-wget https://nodejs.org/dist/v8.10.0/node-v8.10.0-linux-x64.tar.xz
-tar -xf node-v8.10.0-linux-x64.tar.xz
-mv node-v8.10.0-linux-x64.tar.xz/bin/* /usr/local/bin/
-cd /usr/local/bin
-ln -sf npm /opt/node-v8.10.0-linux-x64/lib/node_modules/npm/bin/npm-cli.js
+yum install -y wget vim ruby unzip git
+curl --silent --location https://rpm.nodesource.com/setup_8.x | sudo bash -
+sudo yum install -y nodejs
 cd /home/ec2-user
 curl "https://s3.amazonaws.com/aws-cli/awscli-bundle.zip" -o "awscli-bundle.zip"
 unzip awscli-bundle.zip
