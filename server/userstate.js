@@ -1,35 +1,18 @@
 'use strict';
 module.exports = class UserState {
-	constructor(x, y) {
-		this.x = x;
-		this.y = y;
+	constructor(pos) {
+		this.pos = pos;
 	}
 
-	getX() {
-	    return this.x;	
+	getPos() {
+		return this.pos;	
 	}
 
-	getY() {
-	    return this.y;	
+	setPos(pos) {
+		this.pos = pos;
 	}
 
-	up() {
-		this.y--;
-	}
-	
-	right() {
-		this.x++;
-	}
-	
-	down() {
-		this.y++;
-	}
-	
-	left() {
-		this.x--;
-	}
-	
 	toString() {
-		return "(" + this.x + "," + this.y + ")";
+		return "(" + this.pos + ")";
 	}
 }

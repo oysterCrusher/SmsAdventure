@@ -1,8 +1,32 @@
-You can only go Up!
-You can only go Right!
-You can only go Right!
-You can only go Up!
-You can only go Up!
-You can only go Left!
-You can only go Up!
-Finish.
+[
+  {
+    "name" : "0 : Entry point",
+    "text" : "Welcome to Shop6! Enter the shop to continue with your shopping experience.",
+    "options" : [
+      { "id" : 1, "commands" : ["enter", "in", "forward"] }
+    ]
+  },
+  {
+    "name" : "1 : Inside the door",
+    "text" : "You are inside the entrance, on your left are shelves and shelves of books, on your right are thousands of movies.",
+    "options" : [
+      { "id" : 0, "commands" : ["run away", "flee"] },
+      { "id" : 2, "commands" : ["books", "left"] },
+      { "id" : 3, "commands" : ["movies", "right"] }
+    ]
+   },
+   {
+     "name" : "2 : Books",
+     "text" : "Lot's of books.",
+     "options" : [
+       { "id" : 1, "commands" : ["leave", "exit"] }
+     ]
+   },
+   {
+     "name" : "3 : Movies",
+     "text" : "Lot's of movies.",
+     "options" : [
+       { "id" : 1, "commands" : ["leave", "exit"] }
+     ]
+   }
+]

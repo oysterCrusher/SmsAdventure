@@ -24,57 +24,21 @@ function start(number, response) {
 	console.log("Starting [" + number + "]");
 
 	// Set the users state to the maps starting position.
-	userstates[number.toString()] = new UserState(map.startX(), map.startY());
+	let currentstate = new UserState(map.startPos());
+	userstates[number.toString()] = currentstate;
 
 	// And just respond saying we've started.
-	response.write("Let the games begin!");
+	response.write(map.getMessage(currentstate.getPos()));
 }
 
 function processMessage(number, currentstate, message, response) {
 	console.log("Processing message from number[" + number + "] with contents [" + message + "]");
 	console.log("The current state is something like [" + currentstate + "]");
 
-	// Yeah, I'll stop this being so repetitive at some point.
-	if (message.includes("up")) {
-		if (map.upFrom(currentstate.getX(), currentstate.getY())) {
-			currentstate.up();
-			// This probably isn't required.
-			userstates[number.toString()] = currentstate;
-			response.write(map.getMessage(currentstate.getX(), currentstate.getY()));
-			
-			if (map.isEnd(currentstate.getX(), currentstate.getY())) {
-				response.write("CONGRATULATIONS!!!!!");
-				delete userstates[number.toString()];
-			}
-			
-			return;
-		}
-	} else if (message.includes("right")) {
-		if (map.rightFrom(currentstate.getX(), currentstate.getY())) {
-			currentstate.right();
-			// This probably isn't required.
-			userstates[number.toString()] = currentstate;
-			response.write(map.getMessage(currentstate.getX(), currentstate.getY()));
-			return;
-		}
-	} else if (message.includes("down")) {
-		if (map.downFrom(currentstate.getX(), currentstate.getY())) {
-			currentstate.down();
-			// This probably isn't required.
-			userstates[number.toString()] = currentstate;
-			response.write(map.getMessage(currentstate.getX(), currentstate.getY()));
-			return;
-		}
-	} else if (message.includes("left")) {
-		if (map.leftFrom(currentstate.getX(), currentstate.getY())) {
-			currentstate.left();
-			// This probably isn't required.
-			userstates[number.toString()] = currentstate;
-			response.write(map.getMessage(currentstate.getX(), currentstate.getY()));
-			return;
-		}
-	}
-
-	// And respond saying we've updated the state.
-	response.write("That's not a valid option!");
+    if (message.includes("enter")) {
+    	currentstate.setPos(1);
+    	response.write(map.getMessage(currentstate.getPos()));
+    } else {
+    	response.write("That's not a valid option!");
+    }
 }
