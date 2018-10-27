@@ -32,13 +32,19 @@ function start(number, response) {
 }
 
 function processMessage(number, currentstate, message, response) {
-	console.log("Processing message from number[" + number + "] with contents [" + message + "]");
-	console.log("The current state is something like [" + currentstate + "]");
+    console.log("Processing message from number[" + number + "] with contents [" + message + "]");
+    console.log("The current state is something like [" + currentstate + "]");
 
-    if (message.includes("enter")) {
-    	currentstate.setPos(1);
-    	response.write(map.getMessage(currentstate.getPos()));
-    } else {
-    	response.write("That's not a valid option!");
+    var currentOptions = map.getOptions(currentstate.getPos());
+    
+    currentOptions.forEach(function(option){
+      option.forEach(function(command){
+        if (message.includes(command)) {
+          currentstate.setPos(option.id);
+          response.write(map.getMessage(currentstate.getPos()));
+        } else {
+          esponse.write("That's not a valid option!");
+        }
+      }
     }
 }
