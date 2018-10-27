@@ -8,7 +8,7 @@ const map = new Maze();
 let userstates = {};
 
 exports.process = (number, message, response) => {
-	console.log("Received message from [" + message + "] from [" + number + "]");
+	console.log("Received message from [" + number + "] with content [" + message + "]");
 
 	// Get current state for this number.
 	let currentstate = userstates[number];
