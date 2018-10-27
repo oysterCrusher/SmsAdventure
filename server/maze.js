@@ -1,15 +1,24 @@
 'use strict';
+
+var fileReader = require('./FileReader.js');
+var linesArray = new fileReader();
+
 module.exports = class Maze {
 	constructor() {
 		this.mapp = [
-			[0, 0, 1, 0, 0],
-			[0, 0, 1, 1, 0],
-			[0, 0, 0, 1, 0],
-			[0, 1, 1, 1, 0],
+			[0, 0, 8, 0, 0],
+			[0, 0, 7, 6, 0],
+			[0, 0, 0, 5, 0],
+			[0, 2, 3, 4, 0],
 			[0, 1, 0, 0, 0]
 	    ];
 	}
-	
+
+    mapLocationToMessage(x, y){
+        var lineNumber = this.mapp[0][2] -1;
+        return linesArray[lineNumber];
+	}
+
 	startX() {
 		return 1;
 	}
