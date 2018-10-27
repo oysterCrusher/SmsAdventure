@@ -40,7 +40,7 @@ function processMessage(number, currentstate, message, response) {
 			currentstate.up();
 			// This probably isn't required.
 			userstates[number.toString()] = currentstate;
-			response.write(maze.getMessage(currentstate.getX(), currentstate.getY()));
+			response.write(map.getMessage(currentstate.getX(), currentstate.getY()));
 			
 			if (map.isEnd(currentstate.getX(), currentstate.getY())) {
 				response.write("CONGRATULATIONS!!!!!");
@@ -54,7 +54,7 @@ function processMessage(number, currentstate, message, response) {
 			currentstate.right();
 			// This probably isn't required.
 			userstates[number.toString()] = currentstate;
-			response.write(maze.getMessage(currentstate.getX(), currentstate.getY()));
+			response.write(map.getMessage(currentstate.getX(), currentstate.getY()));
 			return;
 		}
 	} else if (message.includes("down")) {
@@ -62,7 +62,7 @@ function processMessage(number, currentstate, message, response) {
 			currentstate.down();
 			// This probably isn't required.
 			userstates[number.toString()] = currentstate;
-			response.write(maze.getMessage(currentstate.getX(), currentstate.getY()));
+			response.write(map.getMessage(currentstate.getX(), currentstate.getY()));
 			return;
 		}
 	} else if (message.includes("left")) {
@@ -70,7 +70,7 @@ function processMessage(number, currentstate, message, response) {
 			currentstate.left();
 			// This probably isn't required.
 			userstates[number.toString()] = currentstate;
-			response.write(maze.getMessage(currentstate.getX(), currentstate.getY()));
+			response.write(map.getMessage(currentstate.getX(), currentstate.getY()));
 			return;
 		}
 	}

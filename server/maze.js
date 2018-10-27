@@ -1,7 +1,7 @@
 'use strict';
 
-var fileReader = require('./FileReader.js');
-var linesArray = new fileReader();
+var FileReader = require('./FileReader.js');
+var linesArray = new FileReader();
 
 module.exports = class Maze {
 	constructor() {
@@ -14,8 +14,8 @@ module.exports = class Maze {
 	    ];
 	}
 
-    getMessage(x, y){
-        var lineNumber = this.mapp[0][2] -1;
+    getMessage(x, y) {
+        var lineNumber = this.mapp[y][x] - 1;
         return linesArray[lineNumber];
 	}
 
@@ -60,7 +60,7 @@ module.exports = class Maze {
 			return false;
 		}
 		
-		return this.mapp[y][x] === 1;
+		return this.mapp[y][x] != 0;
 	}
 
 	isEnd(x, y) {
