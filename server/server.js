@@ -1,6 +1,6 @@
 'use strict';
 
-let port = 8080;
+let port = 80;
 //let port = 3000;
 
 const http = require('http');
