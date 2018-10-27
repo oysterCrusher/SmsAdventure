@@ -1,6 +1,6 @@
 'use strict';
 
-let port = process.env.SMS_PORT;
+let port = 8080;
 //let port = 3000;
 
 const http = require('http');
