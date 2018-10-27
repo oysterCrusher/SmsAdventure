@@ -14,7 +14,7 @@ module.exports = class Maze {
 	    ];
 	}
 
-    mapLocationToMessage(x, y){
+    getMessage(x, y){
         var lineNumber = this.mapp[0][2] -1;
         return linesArray[lineNumber];
 	}
