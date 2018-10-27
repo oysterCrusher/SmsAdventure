@@ -1,0 +1,23 @@
+{
+  "name": "smsadventure",
+  "version": "1.0.0",
+  "description": "Read me. Please.",
+  "main": "server/server.js",
+  "scripts": {
+    "start": "node server/server.js",
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/oysterCrusher/SmsAdventure.git"
+  },
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/oysterCrusher/SmsAdventure/issues"
+  },
+  "homepage": "https://github.com/oysterCrusher/SmsAdventure#readme",
+  "devDependencies": {
+    "clockwork": "^0.1.4"
+  }
+}
