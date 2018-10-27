@@ -1,0 +1,3 @@
+Welcome to your first story. You are alive on a ship.
+Go forward or back?
+Hello! You still there?
