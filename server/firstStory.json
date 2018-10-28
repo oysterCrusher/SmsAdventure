@@ -51,8 +51,8 @@
       { "id" : 6, "commands" : ["pay", "finish", "done", "home", "bye"] }
     ],
     "items" : [
-        { "name" : "V for Vendetta", "price" : "£9.51", "description" : "A frightening and powerful tale of the loss of freedom and identity in a chillingly believable totalitarian world." },
-        { "name" : "The Ballad of Halo Jones", "price" : "£2.83", "description" : "When Halo Jones grows bored with her life in The Hoop, a futuristic world where jobs are scarce and excitement is nonexistent." }
+        { "name" : "v for vendetta", "price" : "£9.51", "description" : "A frightening and powerful tale of the loss of freedom and identity in a chillingly believable totalitarian world." },
+        { "name" : "the ballad of halo jones", "price" : "£2.83", "description" : "When Halo Jones grows bored with her life in The Hoop, a futuristic world where jobs are scarce and excitement is nonexistent." }
     ]
    },
   {
@@ -64,12 +64,12 @@
       { "id" : 6, "commands" : ["pay", "finish", "done", "home", "bye"] }
     ],
     "items" : [
-      { "name" : "Hot Fuzz", "price" : "£1.89", "description" : "As a former London constable, Nicholas Angel (Simon Pegg) finds it difficult to adapt to his new assignment in the sleepy British village of Sandford." },
-      { "name" : "Shaun of the Dead", "price" : "£4.99", "description" : "Shaun is a 30-something loser with a dull, easy existence. He lives with his slovenly best friend, Ed (Nick Frost), in a small flat on the outskirts of London." }
+      { "name" : "hot fuzz", "price" : "£1.89", "description" : "As a former London constable, Nicholas Angel (Simon Pegg) finds it difficult to adapt to his new assignment in the sleepy British village of Sandford." },
+      { "name" : "shaun of the dead", "price" : "£4.99", "description" : "Shaun is a 30-something loser with a dull, easy existence. He lives with his slovenly best friend, Ed (Nick Frost), in a small flat on the outskirts of London." }
     ]
   },
    {
-     "name" : "6 : Checkout",
+     "name" : "6 : checkout",
      "text" : "If that is everything I would pack your items and send them directly to your address. Thanks for shopping at JK Mith! Have a great day!",
      "options" : [ ],
      "items" : [ ]
