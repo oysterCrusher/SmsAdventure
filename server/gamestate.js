@@ -35,7 +35,19 @@ exports.process = (number, message, response) => {
     console.log("Processing message from number[" + number + "] with contents [" + message + "]");
     console.log("The current state is something like [" + currentstate + "]");
 
-    var currentOptions = map.getOptions(currentstate.getPos());
+    let currentOptions = map.getOptions(currentstate.getPos());
+
+    let matches = currentOptions.filter(option => {
+        return arrayIncludes(option['commands'], message);
+    });
+
+    if (matches.length > 0) {
+    	let match = matches[0];
+    	currentstate.setPos(match.id);
+    	response.write(map.getMessage(currentstate.getPos()));
+    } else {
+    	response.write("That's not a valid option!");
+    }
     
     currentOptions.forEach(function(option){
       option.forEach(function(command){
@@ -49,3 +61,11 @@ exports.process = (number, message, response) => {
       }
     }
   }
+    
+
+  function arrayIncludes(values, string) {
+    	return values.filter(value => {
+    		return string.includes(value);
+    	}).length > 0;
+    }
+

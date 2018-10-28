@@ -2,6 +2,7 @@
 module.exports = class UserState {
 	constructor(pos) {
 		this.pos = pos;
+		this.inventory = [];
 	}
 
 	getPos() {
@@ -10,6 +11,14 @@ module.exports = class UserState {
 
 	setPos(pos) {
 		this.pos = pos;
+	}
+
+	getInventory() {
+		return this.inventory;
+	}
+
+	addToInventory(item) {
+		this.inventory.push(item);
 	}
 
 	toString() {

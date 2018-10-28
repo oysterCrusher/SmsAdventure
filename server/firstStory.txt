@@ -12,7 +12,8 @@
     "options" : [
       { "id" : 0, "commands" : ["run away", "flee"] },
       { "id" : 2, "commands" : ["books", "left"] },
-      { "id" : 3, "commands" : ["movies", "right"] }
+      { "id" : 3, "commands" : ["movies", "right"] },
+      { "id" : 4, "commands" : ["checkout", "pay"] }
     ]
    },
    {
@@ -20,6 +21,9 @@
      "text" : "Lot's of books.",
      "options" : [
        { "id" : 1, "commands" : ["leave", "exit"] }
+     ],
+     "items" : [
+       { "name" : "book" }
      ]
    },
    {
@@ -27,6 +31,17 @@
      "text" : "Lot's of movies.",
      "options" : [
        { "id" : 1, "commands" : ["leave", "exit"] }
+     ],
+     "items" : [
+       { "name" : "dvd" }
      ]
+   },
+   {
+     "name" : "4 : Checkout",
+     "text" : "Time to pay up.",
+     "options" : [
+       { "id" : 4, "commands" : ["pay"] }
+     ],
+     "items" : [ ]
    }
 ]
