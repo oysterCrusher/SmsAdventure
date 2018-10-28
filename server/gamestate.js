@@ -35,6 +35,12 @@ exports.process = (number, message, response) => {
     console.log("Processing message from number[" + number + "] with contents [" + message + "]");
     console.log("The current state is something like [" + currentstate + "]");
 
+    let currentitems = map.getItems(currentstate.getPos());
+    let pickedUp = doPickup(message, currentitems, currentstate, response);
+    if (pickedUp) {
+    	return;
+    }
+
     let currentOptions = map.getOptions(currentstate.getPos());
 
     let matches = currentOptions.filter(option => {
@@ -48,10 +54,30 @@ exports.process = (number, message, response) => {
     } else {
     	response.write("That's not a valid option!");
     }
-    
-    function arrayIncludes(values, string) {
-    	return values.filter(value => {
-    		return string.includes(value);
-    	}).length > 0;
-    }
-}
+  }
+
+  function doPickup(message, items, currentstate, response) {
+	  let lowercased = message.toLowerCase();
+	  if (lowercased.startsWith("pick up")) {
+		  let remaining = lowercased.substring("pick up".length);
+		  console.log(remaining);
+		  let matches = items.filter(item => {
+			  console.log("r " + remaining);
+			  console.log("i " + item.name);
+			  return remaining.includes(item.name);
+		  });
+		  
+		  if (matches.length > 0) {
+			  currentstate.addToInventory(matches[0]);
+			  response.write("Picked up [" + matches[0].name + "]");
+			  return true;
+		  }
+	  }
+	  return false;
+  }
+
+  function arrayIncludes(values, string) {
+  	return values.filter(value => {
+  		return string.includes(value);
+  	}).length > 0;
+  }

@@ -3,23 +3,27 @@
 const fs = require('fs');
 
 module.exports = class Maze {
-    constructor() {
-      let data = fs.readFileSync('./server/firstStory.txt','utf8');
-      console.log(data);
-		
-      this.mapp = JSON.parse(data);
-      console.log(this.mapp);
-    }
+	constructor() {
+		let data = fs.readFileSync('./server/firstStory.txt','utf8');
+		console.log(data);
 
-    getMessage(pos) {
-      return this.mapp[pos]['text'];
-    }
+		this.mapp = JSON.parse(data);
+		console.log(this.mapp);
+	}
 
-    startPos() {
-      return 0;
-    }
+	getMessage(pos) {
+		return this.mapp[pos]['text'];
+	}
 
-    getOptions(pos) {
-      return this.mapp[pos]['options'];
-    }
+	startPos() {
+		return 0;
+	}
+
+	getOptions(pos) {
+		return this.mapp[pos]['options'];
+	}
+
+	getItems(pos) {
+		return this.mapp[pos]['items'];
+	}
 }
