@@ -40,8 +40,14 @@
      "name" : "4 : Checkout",
      "text" : "Time to pay up.",
      "options" : [
-       { "id" : 4, "commands" : ["pay"] }
+       { "id" : 5, "commands" : ["pay"] }
      ],
+     "items" : [ ]
+   },
+   {
+     "name" : "5 : Checkout",
+     "text" : "Thanks for visiting. See you again soon!",
+     "options" : [ ],
      "items" : [ ]
    }
 ]
