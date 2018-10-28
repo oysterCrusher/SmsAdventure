@@ -5,7 +5,7 @@ let port = 80;
 
 const http = require('http');
 const url = require('url');
-const Messenger = require("./clockworkmessenger.js");
+const Messenger = require("./fakemessenger.js");
 const gamestate = require('./gamestate.js');
 
 const hostname = '0.0.0.0';
@@ -23,7 +23,7 @@ const server = http.createServer((req, res) => {
     gamestate.process(number, message, response);
   }
 
-  res.end('Thanks');
+  res.end();
 });
 
 server.listen(port, hostname, () => {
