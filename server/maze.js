@@ -4,7 +4,7 @@ const fs = require('fs');
 
 module.exports = class Maze {
 	constructor() {
-		let data = fs.readFileSync('./server/firstStory.txt','utf8');
+		let data = fs.readFileSync('./server/firstStory.json','utf8');
 		console.log(data);
 
 		this.mapp = JSON.parse(data);
