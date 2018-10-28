@@ -47,4 +47,5 @@ function processMessage(number, currentstate, message, response) {
         }
       }
     }
+  }
 }
