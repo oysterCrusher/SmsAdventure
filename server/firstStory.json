@@ -1,0 +1,76 @@
+[
+  {
+    "name" : "0 : At the entrance",
+    "text" : "Hello there! Welcome to JK Mith! My name is Dan. An I will be your SMS assistant today. Would you like to begin with your shopping experience?",
+    "options" : [
+      { "id" : 1, "commands" : ["yes", "begin", "start", "go", "hi"] }
+    ],
+    "items" : [ ]
+  },
+  {
+    "name" : "1 : The first aisle",
+    "text" : "OK Great! So, I am at the first aisle now. We've got loads of books and thousands of movies. Which ones would you like to go through?",
+    "options" : [
+      { "id" : 2, "commands" : ["book", "read"] },
+      { "id" : 5, "commands" : ["movie", "film", "watch", "dvd"] }
+    ],
+    "items" : [ ]
+   },
+   {
+     "name" : "2 : The books",
+     "text" : "Amazing! Based on your previous purchases we've got science fiction and comics that best match your profile. Which one do you prefer?",
+     "options" : [
+       { "id" : 3, "commands" : ["science fiction", "Sci-Fi", "SF", "hi-fi", "first"] },
+       { "id" : 4, "commands" : ["comics", "comic", "second"] }
+     ],
+     "items" : [ ]
+   },
+   {
+     "name" : "3 : Books : Science Fiction",
+     "text" : "Super! That's one of my favourite genres! So the best ones we've got are: 1984 by George Orwell, Childhood's End by Arthur C. Clarke and The Time Machine by H.G. Wells. Which one are you interested in?",
+     "options" : [
+       { "id" : 2, "commands" : ["back", "go back", "no", "cancel"] },
+       { "id" : 2, "commands" : ["more", "book", "another", "read"] },
+       { "id" : 5, "commands" : ["movie", "film", "watch", "dvd"] },
+       { "id" : 6, "commands" : ["pay", "finish", "done", "home", "bye"] }
+     ],
+     "items" : [
+       { "name" : "1984", "price" : "£6.97", "description" : "Among the seminal texts of the 20th century, Nineteen Eighty-Four is a rare work that grows more haunting as its futuristic purgatory becomes more real."},
+       { "name" : "Childhood's End", "price" : "£6.66", "description" : "The Overlords appeared suddenly over every city--intellectually, technologically, and militarily superior to humankind. Benevolent, they made few demands: unify earth, eliminate poverty, and end war." },
+       { "name" : "The Time Machine", "price" : "£4.63", "description" : "So begins the Time Traveller’s astonishing firsthand account of his journey 800,000 years beyond his own era—and the story that launched H.G." }
+     ]
+   },
+   {
+    "name" : "4 : Books : Comics",
+    "text" : "Great, we might have something special for you... OK, so we've got V for Vendetta and The Ballad of Halo Jones by Alan Moore. What shall I pick up for you?",
+    "options" : [
+      { "id" : 2, "commands" : ["back", "go back", "no", "cancel"] },
+      { "id" : 2, "commands" : ["more", "book", "another", "read"] },
+      { "id" : 5, "commands" : ["movie", "film", "watch", "dvd"] },
+      { "id" : 6, "commands" : ["pay", "finish", "done", "home", "bye"] }
+    ],
+    "items" : [
+        { "name" : "V for Vendetta", "price" : "£9.51", "description" : "A frightening and powerful tale of the loss of freedom and identity in a chillingly believable totalitarian world." },
+        { "name" : "The Ballad of Halo Jones", "price" : "£2.83", "description" : "When Halo Jones grows bored with her life in The Hoop, a futuristic world where jobs are scarce and excitement is nonexistent." }
+    ]
+   },
+  {
+    "name" : "5 : The Movies",
+    "text" : "Of course! We saw that you love comedies? We have something very special for you! How does Hot Fuzz or Shaun of the Dead sound to you?",
+    "options" : [
+      { "id" : 2, "commands" : ["back", "go back", "no", "cancel"] },
+      { "id" : 5, "commands" : ["more", "movie", "another", "film", "watch", "dvd"] },
+      { "id" : 6, "commands" : ["pay", "finish", "done", "home", "bye"] }
+    ],
+    "items" : [
+      { "name" : "V for Vendetta", "price" : "£9.51", "description" : "A frightening and powerful tale of the loss of freedom and identity in a chillingly believable totalitarian world." },
+      { "name" : "The Ballad of Halo Jones", "price" : "£2.83", "description" : "When Halo Jones grows bored with her life in The Hoop, a futuristic world where jobs are scarce and excitement is nonexistent." }
+    ]
+  },
+   {
+     "name" : "6 : Checkout",
+     "text" : "If that is everything I would pack your items and send them directly to your address. Thanks for shopping at JK Mith! Have a great day!",
+     "options" : [ ],
+     "items" : [ ]
+   }
+]
