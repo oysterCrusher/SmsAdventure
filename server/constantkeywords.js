@@ -6,7 +6,7 @@ module.exports = class ConstantKeywords {
 	process(message, currentstate, response) {
 		if (message.toLowerCase().includes("basket")) {
 			let inventory = currentstate.getInventory();
-			let namedinventory = inventory.map(i => { return i.name })
+			let namedinventory = inventory.map(i => { return i.name + " - " + i.price });
 			
 			if (inventory.length == 0) {
 				response.write("Basket is empty");
