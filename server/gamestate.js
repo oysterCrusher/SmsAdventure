@@ -50,7 +50,7 @@ exports.process = (number, message, response) => {
     }
     
     currentOptions.forEach(function(option){
-      option.forEach(function(command){
+      option.commands.forEach(function(command){
         if (message.includes(command)){
           currentstate.setPos(option.id);
           response.write(map.getMessage(currentstate.getPos()));
