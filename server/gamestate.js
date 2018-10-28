@@ -35,16 +35,29 @@ function processMessage(number, currentstate, message, response) {
     console.log("Processing message from number[" + number + "] with contents [" + message + "]");
     console.log("The current state is something like [" + currentstate + "]");
 
-    var currentOptions = map.getOptions(currentstate.getPos());
+    let currentOptions = map.getOptions(currentstate.getPos());
+
+    let matches = currentOptions.filter(option => {
+        var included = arrayIncludes(option['commands'], message);
+        console.log(included);
+        return included;
+    });
+    if (matches.length > 0) {
+    	let match = matches[0];
+    	currentstate.setPos(match.id);
+    	response.write(map.getMessage(currentstate.getPos()));
+    } else {
+    	response.write("That's not a valid option!");
+    }
     
-    currentOptions.forEach(function(option){
-      option.forEach(function(command){
-        if (message.includes(command)) {
-          currentstate.setPos(option.id);
-          response.write(map.getMessage(currentstate.getPos()));
-        } else {
-          esponse.write("That's not a valid option!");
-        }
-      }
+    function arrayIncludes(values, string) {
+    	var m = values.filter(value => {
+    		console.log(string + ", " + value);
+    		return string.includes(value);
+    	});
+    	
+    	console.log(m);
+    	
+    	return m.length > 0;
     }
 }
