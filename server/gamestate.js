@@ -58,8 +58,8 @@ exports.process = (number, message, response) => {
         else {
           response.write("That's not a valid option!");
         }
-      }
-    }
+      });
+    });
   }
     
 
@@ -68,4 +68,3 @@ exports.process = (number, message, response) => {
     		return string.includes(value);
     	}).length > 0;
     }
-
