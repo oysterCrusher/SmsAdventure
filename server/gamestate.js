@@ -20,7 +20,7 @@ exports.process = (number, message, response) => {
 	} 
 };
 
-function start(number, response) {
+  function start(number, response) {
 	console.log("Starting [" + number + "]");
 
 	// Set the users state to the maps starting position.
@@ -29,9 +29,9 @@ function start(number, response) {
 
 	// And just respond saying we've started.
 	response.write(map.getMessage(currentstate.getPos()));
-}
+  }
 
-function processMessage(number, currentstate, message, response) {
+  function processMessage(number, currentstate, message, response) {
     console.log("Processing message from number[" + number + "] with contents [" + message + "]");
     console.log("The current state is something like [" + currentstate + "]");
 
