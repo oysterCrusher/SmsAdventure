@@ -18,7 +18,7 @@ exports.process = (number, message, response) => {
 	} else {
 		start(number, response);
 	} 
-};
+  };
 
   function start(number, response) {
 	console.log("Starting [" + number + "]");
@@ -39,14 +39,13 @@ exports.process = (number, message, response) => {
     
     currentOptions.forEach(function(option){
       option.forEach(function(command){
-        if (message.includes(command)) {
+        if (message.includes(command)){
           currentstate.setPos(option.id);
           response.write(map.getMessage(currentstate.getPos()));
-        } else {
+        }
+        else {
           response.write("That's not a valid option!");
         }
       }
     }
   }
-
-}
