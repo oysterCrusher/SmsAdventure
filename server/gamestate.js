@@ -59,7 +59,7 @@ exports.process = (number, message, response) => {
     	currentstate.setPos(match.id);
     	response.write(map.getMessage(currentstate.getPos()));
     } else {
-    	response.write("That's not a valid option!");
+    	response.write(map.getMessage(currentstate.getPos()));
     }
   }
 
