@@ -38,10 +38,9 @@ exports.process = (number, message, response) => {
     let currentOptions = map.getOptions(currentstate.getPos());
 
     let matches = currentOptions.filter(option => {
-        var included = arrayIncludes(option['commands'], message);
-        console.log(included);
-        return included;
+        return arrayIncludes(option['commands'], message);
     });
+
     if (matches.length > 0) {
     	let match = matches[0];
     	currentstate.setPos(match.id);
@@ -51,13 +50,8 @@ exports.process = (number, message, response) => {
     }
     
     function arrayIncludes(values, string) {
-    	var m = values.filter(value => {
-    		console.log(string + ", " + value);
+    	return values.filter(value => {
     		return string.includes(value);
-    	});
-    	
-    	console.log(m);
-    	
-    	return m.length > 0;
+    	}).length > 0;
     }
 }
