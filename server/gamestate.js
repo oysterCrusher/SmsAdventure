@@ -1,8 +1,10 @@
 'use strict';
 const Maze = require("./maze.js");
 const UserState = require("./userstate.js");
+const ConstantKeywords = require("./constantkeywords.js");
 
 const map = new Maze();
+const ckeys = new ConstantKeywords();
 
 //State for each user, keyed on their number.
 let userstates = {};
@@ -35,6 +37,11 @@ exports.process = (number, message, response) => {
     console.log("Processing message from number[" + number + "] with contents [" + message + "]");
     console.log("The current state is something like [" + currentstate + "]");
 
+    let ckeyshandled = ckeys.process(message, currentstate, response);
+    if (ckeyshandled) {
+    	return;
+    }
+    
     let currentitems = map.getItems(currentstate.getPos());
     let pickedUp = doPickup(message, currentitems, currentstate, response);
     if (pickedUp) {

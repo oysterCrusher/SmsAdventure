@@ -13,7 +13,7 @@
       { "id" : 0, "commands" : ["run away", "flee"] },
       { "id" : 2, "commands" : ["books", "left"] },
       { "id" : 3, "commands" : ["movies", "right"] },
-      { "id" : 4, "commands" : ["checkout", "pay"] }
+      { "id" : 5, "commands" : ["checkout", "pay"] }
     ]
    },
    {
@@ -37,15 +37,25 @@
      ]
    },
    {
-     "name" : "4 : Checkout",
+    "name" : "4 : Aisle 2",
+    "text" : "You move on to aisle two, on your left are clothes, on your right are groceries.",
+    "options" : [
+      { "id" : 1, "commands" : ["back"] },
+      { "id" : 2, "commands" : ["books", "left"] },
+      { "id" : 3, "commands" : ["movies", "right"] },
+      { "id" : 5, "commands" : ["checkout", "pay"] }
+    ]
+   },
+   {
+     "name" : "5 : Checkout",
      "text" : "Time to pay up.",
      "options" : [
-       { "id" : 5, "commands" : ["pay"] }
+       { "id" : 6, "commands" : ["pay"] }
      ],
      "items" : [ ]
    },
    {
-     "name" : "5 : Checkout",
+     "name" : "6 : Checkout",
      "text" : "Thanks for visiting. See you again soon!",
      "options" : [ ],
      "items" : [ ]
