@@ -5,7 +5,7 @@ let port = 80;
 
 const http = require('http');
 const url = require('url');
-const Messenger = require("./fakemessenger.js");
+const Messenger = require("./clockworkmessenger.js");
 const gamestate = require('./gamestate.js');
 
 const hostname = '0.0.0.0';
